@@ -1,0 +1,43 @@
+{
+  "hash": "13fe5816",
+  "configHash": "d61e6a43",
+  "lockfileHash": "927099b6",
+  "browserHash": "d5fdfd97",
+  "optimized": {
+    "@angular/common/http": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "d89820df",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "13e58a8d",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "c96e9427",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "90712885",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-BMXFHS4F": {
+      "file": "chunk-BMXFHS4F.js"
+    },
+    "chunk-MYBSLVD2": {
+      "file": "chunk-MYBSLVD2.js"
+    },
+    "chunk-YEPWIHIR": {
+      "file": "chunk-YEPWIHIR.js"
+    }
+  }
+}

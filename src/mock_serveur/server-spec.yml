@@ -1,0 +1,84 @@
+openapi: 3.0.4
+info:
+  title: Sample API
+  description: Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/) or HTML.
+  version: 0.1.9
+
+servers:
+- url: http://api.example.com/v1
+  description: Optional server description, e.g. Main (production) server. Not implemented yet.
+
+paths:
+  /dataFootball:
+    get:
+      operationId: getFootballTeams
+      summary: Returns a list of teams informations.
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        "200":
+          # status code
+          description: A JSON array of team informations
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Teams'
+                example: [ { "name": "Paris Saint-Germain", "city": "Paris", "stadium": "Parc des Princes", "ranking": 1, "budget": 540000000 }, { "name": "Olympique de Marseille", "city": "Marseille", "stadium": "Stade Vélodrome", "ranking": 2, "budget": 200000000 }, { "name": "AS Monaco", "city": "Monaco", "stadium": "Stade Louis II", "ranking": 3, "budget": 150000000 } ]
+  /dataNfl:
+    get:
+      operationId: getNflTeams
+      summary: Returns a list of teams informations.
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        "200":
+          # status code
+          description: A JSON array of team informations
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Teams'
+                example: [ { "name": "New England Patriots", "city": "Foxborough", "stadium": "Gillette Stadium", "ranking": 1, "budget": 500000000 }, { "name": "Kansas City Chiefs", "city": "Kansas City", "stadium": "Arrowhead Stadium", "ranking": 2, "budget": 400000000 }, { "name": "Green Bay Packers", "city": "Green Bay", "stadium": "Lambeau Field", "ranking": 3, "budget": 300000000 } ]
+  /dataNba:
+    get:
+      operationId: getNbaTeams
+      summary: Returns a list of teams informations.
+      description: Optional extended description in CommonMark or HTML.
+      responses:
+        "200":
+          # status code
+          description: A JSON array of team informations
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Teams'
+                example: [ { "name": "Los Angeles Lakers", "city": "Los Angeles", "stadium": "Staples Center", "ranking": 1, "budget": 400000000 }, { "name": "Golden State Warriors", "city": "San Francisco", "stadium": "Chase Center", "ranking": 2, "budget": 350000000 }, { "name": "Brooklyn Nets", "city": "Brooklyn", "stadium": "Barclays Center", "ranking": 3, "budget": 300000000 } ]
+components:
+  schemas:
+    Teams:
+      type: array
+      items:
+        $ref: '#/components/schemas/Team'
+    Team:
+      type: object
+      required:
+      - name
+      - city
+      - stadium
+      - ranking
+      - budget
+      properties:
+        name:
+          type: string
+        city:
+          type: string
+        stadium:
+          type: string
+        ranking:
+          type: integer
+        budget:
+          type: number

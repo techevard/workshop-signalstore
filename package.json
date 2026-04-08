@@ -1,0 +1,42 @@
+{
+  "name": "workshop",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "start:dev": "run-p start mock-server",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "generate-client": "cross-env NODE_TLS_REJECT_UNAUTHORIZED=0 openapi-generator-cli generate -i ./src/mock_serveur/server-spec.yml -g typescript-angular -o src/app/api --additional-properties=ngVersion=21.2.0 --additional-properties=allowUnicodeIdentifiers=true,enumPropertyNaming=camelCase,enumNameSuffix=.enum,modelFileSuffix=.interface,paramNaming=camelCase,supportsES6=true,ngVersion=21",
+    "mock-server": "prism mock ./src/mock_serveur/server-spec.yml"
+  },
+  "private": true,
+  "packageManager": "npm@11.6.2",
+  "dependencies": {
+    "@angular/common": "^21.2.0",
+    "@angular/compiler": "^21.2.0",
+    "@angular/core": "^21.2.0",
+    "@angular/forms": "^21.2.0",
+    "@angular/platform-browser": "^21.2.0",
+    "@angular/router": "^21.2.0",
+    "@openapitools/openapi-generator-cli": "^2.31.1",
+    "@stoplight/prism-cli": "^5.14.2",
+    "cross-env": "^10.1.0",
+    "npm-run-all2": "^8.0.4",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@angular/build": "^21.2.6",
+    "@angular/cli": "^21.2.6",
+    "@angular/compiler-cli": "^21.2.0",
+    "@tailwindcss/postcss": "^4.1.12",
+    "jsdom": "^28.0.0",
+    "postcss": "^8.5.3",
+    "prettier": "^3.8.1",
+    "tailwindcss": "^4.1.12",
+    "typescript": "~5.9.2",
+    "vitest": "^4.0.8"
+  }
+}
