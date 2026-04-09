@@ -1,6 +1,12 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    @if (footballTeams().length > 0) {
     <div>{{ footballTeams()[0].name }}</div>
-    <div>{{ nbaTeams()[0].name }}</div>
+    }
+    @if (nflTeams().length > 0) {
     <div>{{ nflTeams()[0].name }}</div>
+    }
+    @if (nbaTeams().length > 0) {
+    <div>{{ nbaTeams()[0].name }}</div>
+    }
     <div>4</div>
 </div>

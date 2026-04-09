@@ -21,6 +21,7 @@ export class Home {
     // Je "flat" les résultats pour que ça colle à mes attentes.
     this.defaultService.getFootballTeams().subscribe(teams => {
       this.footballTeams.set(teams.flat())
+      console.log(this.footballTeams())
     });
     this.defaultService.getNbaTeams().subscribe(teams => {
       this.nbaTeams.set(teams.flat())
